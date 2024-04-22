@@ -26,6 +26,7 @@ return {
  	},
  },
 
+  
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
@@ -56,14 +57,11 @@ return {
     auto_install = true,
     highlight = {
         enable = true,
-        disabled = {"rust"},
+ --       disabled = {"rust"},
       },
  	},
  },
-  {
-    "rust-lang/rust.vim",
-    ft = "rust",
-    init = function()
+  { "rust-lang/rust.vim", ft = "rust", init = function()
       vim.g.rustfmt_autosave = 1 
     end
   },
@@ -75,15 +73,16 @@ return {
       crates.setup(opts)
       crates.show()
     end,
-  },
-  {
+},
+   {
     "hrsh7th/nvim-cmp",
-    opts = function()
-      local M = require "plugins.configs.cmp"
-      table.insert(M.sources, {name = "crates"})
-      return M
-    end,
-  }
-
+    dependencies = { "zbirenbaum/copilot.lua" },
+  },
+  { "hrsh7th/cmp-nvim-lsp" },
+  { 'mrcjkb/rustaceanvim', version = '^4',lazy = false},
+  { "nvim-lua/plenary.nvim" },
+  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+  { 'nvim-telescope/telescope.nvim', tag = '0.1.6' },
+  { 'simrat39/rust-tools.nvim'}
 
 }

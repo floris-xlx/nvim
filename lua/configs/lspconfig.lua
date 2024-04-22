@@ -6,7 +6,7 @@ local util = require "lspconfig/util"
 
 
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls" }
+local servers = { "html", "cssls"  }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -26,6 +26,7 @@ lspconfig.tsserver.setup {
 
 -- rust
 lspconfig.rust_analyzer.setup ({
+  cmd = { "rustup", "run", "nightly", "rust-analyzer" },
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "rust" },
