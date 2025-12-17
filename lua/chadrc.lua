@@ -1,16 +1,40 @@
--- This file  needs to have same structure as nvconfig.lua 
--- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvconfig.lua
-
+-- This file needs to have same structure as nvconfig.lua
+-- https://github.com/NvChad/ui/blob/v3.0/lua/nvconfig.lua
+-- Please read that file to know all available options :(
 ---@type ChadrcConfig
 local M = {}
 
-M.ui = {
-	theme = "material-lighter",
+M.base46 = {
+    theme = "github_light"
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+    -- hl_override = {
+    -- 	Comment = { italic = true },
+    -- 	["@comment"] = { italic = true },
+    -- },
 }
+M.nvdash = {
+    load_on_startup = true,
+    header = {
+        "  ░▓████░             ░▓████░",
+        "   ▒████▓░           ░▓████▒",
+        "     ▒████▓░         ░▓████▒   ",
+        "      ░█████░       ░█████░   ",
+        "       ░█████░     ░█████░    ",
+        "        ░█████░   ░█████░     ",
+        "        ░█████░   ░█████░     ",
+        "       ░█████░     ░█████░    ",
+        "      ░████▓░       ░▓████░   ",
+        "     ░████▓░         ░▓████▒  ",
+        "    ░████▓░           ░▓████▒ ",
+        "   ░█████░             ░█████░",
+        "                      ", "                      ",
+        "           XYLEX GROUP        ", "                      "
+    }
+}
+-- M.ui = {
+--       tabufline = {
+--          lazyload = false
+--      }
+-- }
 
 return M
