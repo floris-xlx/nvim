@@ -33,5 +33,9 @@ Created `lua/configs/codecompanion.lua` with MCP server configurations for:
 - `lua/plugins/init.lua` - Added codecompanion plugin
 - `lua/configs/codecompanion.lua` - Created with MCP server configs
 
+## Additional Plugins Added
+- **render-markdown.nvim** - Renders markdown with inline images, code blocks, and syntax highlighting
+- **img-clip.nvim** - Enables pasting images directly into codecompanion chat with auto-formatting
+
 ## Usage
 After restarting Neovim or running `:Lazy sync`, the CodeCompanion plugin will be installed and all MCP servers will be available for use.
